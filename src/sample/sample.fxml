@@ -1,8 +1,48 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?sccenebuilder-stylesheet /styles/style.css ?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <stylesheets><URL value="@styles/style.css" /></stylesheets>
+    <children>
+        <HBox prefHeight="379.0" prefWidth="400.0">
+            <children>
+                <TextArea fx:id="userList" editable="false" focusTraversable="false" prefHeight="363.0" prefWidth="317.0">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+                </TextArea>
+                <TextArea fx:id="viewUsers" editable="false" focusTraversable="false" prefHeight="367.0" prefWidth="86.0">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+                </TextArea>
+            </children>
+        </HBox>
+        <HBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="400.0">
+            <children>
+                <TextField fx:id="textField" minWidth="-Infinity" onAction="#sendMsg" prefHeight="27.0" prefWidth="315.0" promptText="Enter massage..." HBox.hgrow="SOMETIMES">
+                    <HBox.margin>
+                        <Insets left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin></TextField>
+                <Button fx:id="sendBtn" onAction="#sendMsg" prefHeight="27.0" prefWidth="78.0" text="Send" VBox.vgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets left="1.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </HBox>
+    </children>
+</VBox>
